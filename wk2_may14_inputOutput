@@ -21,5 +21,5 @@ int main()
 
 /*OUPUT
 User name: 		John
-Account type: 		chequing 
+Account type: 		Chequing 
 Amount of money: 	$800.45*/
