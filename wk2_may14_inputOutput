@@ -20,6 +20,6 @@ int main()
 }
 
 /*OUPUT
-User name: John
-Account type: chequing 
-Amount of money: $800.45*/
+User name: 		John
+Account type: 		chequing 
+Amount of money: 	$800.45*/
