@@ -1,0 +1,74 @@
+/* INPUT OUTPUT function from STDIO & String library PART 1 */
+#include <stdio.h>
+#include <string.h>
+/*Bank account program*/
+void flushKeyb();
+int main()
+{
+	/*Ask for user name*/
+	char name[6];
+	/*select account*/
+	int select;
+	/*flag - continue or stop*/
+	int done = 0;
+
+	/*accounts*/
+	double cheque;
+	double saving;
+	/*DO WHILE PART 2*/
+	do
+	{
+		printf("Please select: 1-Chequing 2-Saving 6-Exit: ");
+		scanf("%d", &select);
+		flushKeyb();
+		
+		/*IF ELSE - LOGIC PART 2*/
+		if (select == 1)
+		{
+			printf("Please enter your name:");
+			gets(name);
+			cheque = 700;
+			printf("User name:		%s\n", name);
+			printf("Account type:		Chequing\n");
+			printf("Amount of money:	$%.2lf\n", cheque);
+			done = 0;
+			printf("\n");
+		}
+		else if (select == 2)
+		{
+			printf("Please enter your name:");
+			gets(name);
+			saving = 800;
+			printf("User name:		%s\n", name);
+			printf("Account type:		Saving\n");
+			printf("Amount of money:	$%.2lf\n", saving);
+			done = 0;
+			printf("\n");
+		}
+		else if (select == 6)
+		{
+			done = 1;
+		}
+	} while (!done); // done =0; 0= false, else 1= true
+	
+	return 0;
+}
+/*Flush the buffer*/
+void flushKeyb(){
+	char
+		ch;
+	do{
+		ch = getchar();
+	} while (ch != '\n');
+}
+
+/*OUPUT
+User name:			John
+Account type:		Saving
+Amount of money:	$800.00*/
+
+/*User name:		Mario
+Account type:		Chequing
+Amount of money:	$700.00*/
+
+                                                            
