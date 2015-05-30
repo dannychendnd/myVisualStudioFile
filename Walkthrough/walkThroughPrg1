@@ -1,0 +1,46 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+int logic(int a, int b)
+{
+	int c = a % b;
+	a++;
+	b--;
+	printf("==%d %d %d==\n", a, b, c);
+	return c + a + b;
+}
+int main()
+{
+	int a, c = 5;
+	float d, f;
+	a = 12 + 8 - 2 * 6;
+	c += 98 + 6;
+	printf("%d %d\n", a, c);
+	d = 13 / 2.0;
+	f = 5 / 3;
+	printf("%.2f %.2f\n", d, f);
+	if (15 > 15)
+		a = 1;
+	else
+		a = -1;
+	c = 3 > 5 && 2 + 5;
+	printf("%d %d\n", a, c);
+	d = 6;
+	do d += 3; while (d < 4);
+	f = 0;
+	switch (2)
+	{
+	case 4:
+		f += 1;
+	case 2:
+		f += 10;
+	case 9:
+		f += 100;
+	}
+	printf("%.2f %.2f\n", d, f);
+	a = 10;
+	c = 5;
+	f = 2;
+	d = logic(a, logic(c, f));
+	printf("%d %d %.2f %.2f\n", a, c, d, f);
+	return 0;
+}
